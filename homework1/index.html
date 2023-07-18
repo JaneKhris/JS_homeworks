@@ -1,20 +1,22 @@
 <script>
     while(true) {
-    let n = Math.floor(Math.random() * 1000);
-    let m = prompt("Введите число",'')
-    console.log(n,m)
-    if (!m) break;
-    if ((isNaN(m) == true) || (m > 1000)) {
-        alert ('Ошибка');
-    } else {
-            if (m < n) {
-                alert('Вы не угадали. Загаданное число больше.')
-            } else if (m > n) {
-                alert('Вы не угадали. Загаданное число меньше.')
-            } else {
-                alert('Вы угадали!')
+        let n = Math.floor(Math.random() * 1000);
+        while(true) {
+        let m = prompt("Введите число",'')
+        console.log(n,m)
+        if (!m) break;
+        if ((isNaN(m) == true) || (m > 1000)) {
+            alert ('Ошибка');
+        } else {
+                if (m < n) {
+                    alert('Вы не угадали. Загаданное число больше.')
+                } else if (m > n) {
+                    alert('Вы не угадали. Загаданное число меньше.')
+                } else {
+                    alert('Вы угадали!')
+                    break
+                }
             }
-
         }
     }
 </script>
